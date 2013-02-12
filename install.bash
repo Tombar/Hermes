@@ -74,7 +74,8 @@ function link_dotfiles () {
 
 function check_command_dependency () {
   $1 --version &> /dev/null
-  handle_error $1 'There was a problem with:'
+  echo 'There was a problem with:' $1
+  # handle_error $1 'There was a problem with:'
 }
 
 function install_homebrew () {
@@ -135,7 +136,8 @@ function homebrew_dependencies () {
   log "${notice}Installing ${component}Homebrew ${notice}dependencies. This may take a while"
   while read recipe; do
     if [[ $recipe == macvim* ]]; then
-      homebrew_checkinstall_vim $recipe
+      # homebrew_checkinstall_vim $recipe
+      echo 'do nothing'
     else
       homebrew_checkinstall_recipe $recipe
     fi
