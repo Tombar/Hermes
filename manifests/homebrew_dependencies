@@ -6,6 +6,12 @@ reattach-to-user-namespace
 fishfish
 ack
 tmux
-rails-completion
 grc
 tree
+bwm-ng
+pstree
+psgrep
+fishfish
+hub
+mercurial
+subversion
