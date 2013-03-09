@@ -1,4 +1,9 @@
-.ctags 
+# Basic options
+--recurse=yes
+--tag-relative=yes
+--exclude=.git
+
+# Scala helpers and regexp
 --langdef=scala 
 --langmap=scala:.scala 
 --regex-scala=/class[ \t]+([a-zA-Z0-9_]+)/\1/c,classes/ 
@@ -10,3 +15,6 @@
 --regex-scala=/val[ \t]+([a-zA-Z0-9_]+)/\1/C,constants/ 
 --regex-scala=/var[ \t]+([a-zA-Z0-9_]+)/\1/l,local variables/ 
 --regex-scala=/package[ \t]+([a-zA-Z0-9_.]+)/\1/p,packages/ 
+
+# PHP
+--langmap=php:.engine.inc.module.theme.install.php --PHP-kinds=+cf-v
