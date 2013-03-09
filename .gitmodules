@@ -82,3 +82,9 @@
 [submodule "hermes/vim/bundle/syntastic"]
 	path = hermes/vim/bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
+[submodule "hermes/vim/bundle/sbt-quickfix"]
+	path = hermes/vim/bundle/sbt-quickfix
+	url = git@github.com:dscleaver/sbt-quickfix.git
+[submodule "hermes/vim/bundle/vim-scala"]
+	path = hermes/vim/bundle/vim-scala
+	url = git@github.com:derekwyatt/vim-scala.git
