@@ -5,22 +5,16 @@ function cd --description "Change working directory"
   builtin cd $argv
   if test "$rvm_project_rvmrc" != 0
     set -l cwd $PWD
-    while true
-      if contains $cwd "" $HOME "/"
-        if test "$rvm_project_rvmrc_default" = 1
-          rvm default 1>/dev/null 2>&1
-        end
-        break
-      else
-        if test -s ".rvmrc"
-          eval "rvm reload" > /dev/null
-          break
-        else
-          set cwd (dirname "$cwd")
-        end
-      end
+    if test -s ".rvmrc"
+        rvm rvmrc load
+    else
+        set -x rvm_bin_path 
+        set -x rvm_env_string
+        set -x rvm_path 
+        set cwd (dirname "$cwd")
     end
-
     set -e cwd
   end
 end
+
+
