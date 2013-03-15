@@ -213,3 +213,6 @@ install_tmux_paste_buffer
 
 log "\n${hermes} ${success}is now installed."
 log "${attention}Open a new ${component}iTerm ${attention}window to load your new environment.\n"
+
+# to use colored cat
+sudo easy_install Pygments
