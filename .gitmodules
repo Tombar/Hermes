@@ -88,3 +88,9 @@
 [submodule "hermes/vim/bundle/vim-scala"]
 	path = hermes/vim/bundle/vim-scala
 	url = git@github.com:derekwyatt/vim-scala.git
+[submodule "hermes/vim/bundle/neocomplcache"]
+	path = hermes/vim/bundle/neocomplcache
+	url = git@github.com:Shougo/neocomplcache.git
+[submodule "hermes/vim/bundle/fish"]
+	path = hermes/vim/bundle/fish
+	url = git@github.com:vim-scripts/fish-syntax.git

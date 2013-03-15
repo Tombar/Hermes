@@ -1,2 +1,3 @@
 *.log
 *.gz
+hermes/config/fish/completions/*
