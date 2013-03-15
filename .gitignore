@@ -3,3 +3,4 @@
 hermes/config/fish/completions/*
 hermes/config/fish/fishd.*
 hermes/config/fish/fish_history
+hermes/vim/bundle/*

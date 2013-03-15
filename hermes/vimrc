@@ -2,6 +2,13 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
+" Wrap
+set nowrap
+" If you like long lines with line wrapping enabled, this solves the problem that pressing down jumpes your cursor “over” the current line to the next line. It changes behaviour so that it jumps to the next row in the editor (much more natural):
+
+nnoremap j gj
+nnoremap k gk
+
 set nocompatible  " Use Vim settings, rather then Vi settings
 set nobackup
 set nowritebackup
@@ -9,10 +16,27 @@ set notimeout
 set ttimeout
 set ttimeoutlen=10
 set noswapfile                    " It's 2012, Vim."
-set history=50
 set ruler         " show the cursor position all the time
 set showcmd       " display incomplete commands
+
+" misc
+set history=500
+set undolevels=1000
+set wildignore=*.swp,*.bak,*.class,*.pyc
+
+" search 
 set incsearch     " do incremental searching
+set hlsearch
+set smartcase     " ignore case if search pattern is all lowercase,
+                  "    case-sensitive otherwise
+                  "
+
+"Tired of clearing highlighted searches by searching for “ldsfhjkhgakjks”? Use this:
+nmap <silent> ,/ :nohlsearch<CR>
+
+" sudo save
+cmap w!! w !sudo tee % >/dev/null
+
 set laststatus=2  " Always display the status line
 set t_Co=256
 syntax on
@@ -29,13 +53,15 @@ set ttymouse=xterm2
 
 filetype plugin indent on
 
-" Softtabs, 2 spaces
+" Softtabs, 4 spaces
 set tabstop=2
 set shiftwidth=2
 set expandtab
+set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
 
 " Display extra whitespace
 " set list listchars=tab:»·,trail:·
+"
 " Clipboard fix for OsX
 set clipboard=unnamed
 
@@ -63,3 +89,6 @@ source $HOME/.vim/syntax.vim
 source $HOME/.vim/tmux.vim
 source $HOME/.vim/visual_fixes.vim
 source $HOME/.vim/scala.vim
+
+" source $HOME/.vim/neocomplcache.vim
+let g:neocomplcache_enable_at_startup = 1
