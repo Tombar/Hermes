@@ -1,0 +1,26 @@
+[user]
+	name = Martin Loy
+	email = martin@guruhub.com.uy
+[color]
+    branch = true
+    ui = true
+    diff = true
+    status = true
+[color "diff"]
+  whitespace = red reverse
+  plain = black bold
+  meta = white
+  frag = magenta bold
+  old = red bold
+  new = green bold
+  commit = yellow
+[color "status"]
+  added = green bold
+  changed = red bold
+  untracked = blue bold
+[help]
+    autocorrect = 1
+[merge]
+      tool = vimdiff
+[apply]
+      whitespace = nowarn
