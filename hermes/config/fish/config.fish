@@ -25,6 +25,19 @@ function flush
   dscacheutil -flushcache
 end
 
+function q
+  ssh ssh.abc5.crvt.net -p 64088 -A
+end
+
+function wtime 
+  curl -o /dev/null -w "Connect: %{time_connect} TTFB: %{time_starttransfer} Total time: %{time_total} \n" -s $argv
+end
+
+function repo 
+  curl -k -X POST --user tombar:nelson1  "https://api.bitbucket.org/1.0/repositories" -d "name=$argv" -d "is_private=true" -d "owner=crovat" > /dev/null
+  echo "Repo creado > git clone git@bitbucket.org:crovat/$argv.git"
+end
+
 function fish_prompt -d "Write out the prompt"
   set -l last_status $status
 
