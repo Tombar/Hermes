@@ -1,2 +1,1 @@
-SBT_OPTS="-Xmx1536m -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=384m -Dfile.encoding=UTF8"
 SBT_OPTS="$SBT_OPTS -noverify -javaagent:/Users/tombar/Applications/JRebel/jrebel.jar -Xmx1536m -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=384m -Dfile.encoding=UTF8"
