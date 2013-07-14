@@ -91,4 +91,4 @@ source $HOME/.vim/visual_fixes.vim
 source $HOME/.vim/scala.vim
 
 " source $HOME/.vim/neocomplcache.vim
-let g:neocomplcache_enable_at_startup = 1
+" let g:neocomplcache_enable_at_startup = 1
